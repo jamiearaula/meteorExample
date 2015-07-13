@@ -133,18 +133,21 @@ body {
   transition: all 200ms ease-in;
 }
 
-.point-button:hover {
-  background: #eb5f3a;
-  color: #fff;
-}
-
 .point-button:active {
   box-shadow: rgba(0,0,0,.3) 0 1px 3px 0 inset;
+}
+
+.details .point-button:hover {
+  color: #fff;
 }
 
 .inc {
   border: #eb5f3a 1px solid;
   color: #eb5f3a;
+}
+
+.inc:hover {
+  background: #eb5f3a;
 }
 
 .rmv {
@@ -160,11 +163,6 @@ body {
   color: #aaa;
   line-height: 2.25rem;
   text-align: center;
-}
-
-.button-container {
-  width: 100%;
-  display: block;
 }
 
 .buttons {
