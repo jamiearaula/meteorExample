@@ -110,6 +110,7 @@ body {
 }
 
 .details .name {
+  padding-top: 20px;
   display: inline-block;
   font-size: 1.5em;
   font-weight: 300;
@@ -119,6 +120,7 @@ body {
 }
 
 .details .point-button {
+  margin-top: 10px;
   border-radius: 3em;
   background: transparent;
   cursor: pointer;
@@ -148,6 +150,16 @@ body {
 
 .inc:hover {
   background: #eb5f3a;
+}
+
+.remove-player {
+  border: red 1px solid;
+  color: red;
+  width: 100% !important;
+}
+
+.remove-player:hover {
+  background: red;
 }
 
 .rmv {
