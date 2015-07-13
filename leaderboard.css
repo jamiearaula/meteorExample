@@ -118,11 +118,9 @@ body {
   vertical-align: middle;
 }
 
-.details .inc {
+.details .point-button {
   border-radius: 3em;
-  border: #eb5f3a 1px solid;
   background: transparent;
-  color: #eb5f3a;
   cursor: pointer;
   float: right;
   font-family: 'Source Sans Pro' ,'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -131,22 +129,49 @@ body {
   margin: 0;
   outline: none;
   padding: 10px 30px;
+  width: 50%;
   transition: all 200ms ease-in;
 }
 
-.inc:hover {
+.point-button:hover {
   background: #eb5f3a;
   color: #fff;
 }
 
-.inc:active {
+.point-button:active {
   box-shadow: rgba(0,0,0,.3) 0 1px 3px 0 inset;
+}
+
+.inc {
+  border: #eb5f3a 1px solid;
+  color: #eb5f3a;
+}
+
+.rmv {
+  border: #336699 1px solid;
+  color: #336699;
+}
+
+.rmv:hover {
+  background: #336699;
 }
 
 .message {
   color: #aaa;
   line-height: 2.25rem;
   text-align: center;
+}
+
+.button-container {
+  width: 100%;
+  display: block;
+}
+
+.buttons {
+  padding-top: 20px;
+  width: 100%;
+  display: inline-block;
+  margin: 0 auto;
 }
 
 @media (max-width: 500px) {
@@ -166,7 +191,7 @@ body {
     padding-left: 0;
   }
 
-  .details .inc {
+  .details .point-button {
     padding: 10px 20px;
   }
 
