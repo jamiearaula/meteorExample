@@ -22,8 +22,7 @@ if (Meteor.isClient) {
       Players.update(Session.get("selectedPlayer"), {$inc: {score: -5}});
     },
     'click .remove-player':function(){
-      var playerId = Session.get("selectedPlayer");
-      Players.remove(playerId);
+      Players.remove(Session.get("selectedPlayer"));
     }
   });
 
