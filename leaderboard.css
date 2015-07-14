@@ -119,7 +119,17 @@ body {
   vertical-align: middle;
 }
 
-.details .point-button {
+.add-scientist{
+  width: 100% !important;
+  border: purple 1px solid;
+  color: purple;
+}
+
+.add-scientist:hover {
+  background: purple;
+}
+
+ .point-button {
   margin-top: 10px;
   border-radius: 3em;
   background: transparent;
@@ -139,7 +149,7 @@ body {
   box-shadow: rgba(0,0,0,.3) 0 1px 3px 0 inset;
 }
 
-.details .point-button:hover {
+ .point-button:hover {
   color: #fff;
 }
 

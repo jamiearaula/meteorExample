@@ -18,6 +18,18 @@ if (Meteor.isClient) {
     'click .inc': function () {
       Players.update(Session.get("selectedPlayer"), {$inc: {score: 5}});
     },
+    'click .add-scientist': function () {
+      var name = prompt("Enter the name of the scientist: ");
+
+      if(name && (name.length!=0) ){
+        Players.insert({ name: name , score: 0} );
+      }
+
+      else if(name.length == 0){
+        alert("You didnt enter any scientist!!!!");
+      }
+    
+    },
     'click .rmv': function () {
       Players.update(Session.get("selectedPlayer"), {$inc: {score: -5}});
     },
