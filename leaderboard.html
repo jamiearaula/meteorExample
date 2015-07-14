@@ -6,9 +6,10 @@
 
 <body>
   <div class="outer">
+  {{> loginButtons}}
     <div class="logo"></div>
     <h1 class="title">Leaderboard</h1>
-    <div class="subtitle">Select/Add/Remove a scientist to give/take points</div>
+    <div class="subtitle">Add a scientist or select a scientist to give/take points/remove sceintists</div>
     {{> leaderboard}}
   </div>
 </body>
@@ -19,23 +20,26 @@
       {{> player}}
     {{/each}}
   </ol>
-   <div class="button-container">
-     <button class="add-scientist point-button">Add a scientist</button>
-   </div>
-  {{#if selectedName}}
-    <div class="details">
-      <div class="name">{{selectedName}}</div>
-      <div class="button-container">
-        <button class="inc point-button">Add 5 points</button>
-        <button class="rmv point-button">Take 5 points</button>
-      </div>
-      <div class="button-container">
-        <button class="remove-player point-button">Remove Scientist</button>
-      </div>
+  {{#if currentUser}}
+    <div class="button-container">
+      <button class="add-scientist point-button">Add a scientist</button>
     </div>
-  {{else}}
-    <div class="message">Click a player to select</div>
-
+    {{#if selectedName}}
+      <div class="details">
+        <div class="name">{{selectedName}}</div>
+        <div class="button-container">
+          <button class="inc point-button">Add 5 points</button>
+          <button class="rmv point-button">Take 5 points</button>
+        </div>
+      {{#if isAdmin "Admin"}}
+        <div class="button-container">
+          <button class="remove-player point-button">Remove Scientist</button>
+        </div>
+      {{/if}}
+      </div>
+    {{else}}
+      <div class="message">Click a player to select</div>
+    {{/if}}
   {{/if}}
 </template>
 

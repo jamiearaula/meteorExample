@@ -11,6 +11,14 @@ if (Meteor.isClient) {
     selectedName: function () {
       var player = Players.findOne(Session.get("selectedPlayer"));
       return player && player.name;
+    },
+    isAdmin: function(userType){
+      try{
+        return Meteor.user().profile.userType === userType;
+      }
+      catch(e){
+        
+      }
     }
   });
 
